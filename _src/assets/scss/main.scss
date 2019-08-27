@@ -3,3 +3,12 @@
   height: 100vh;
   text-align: center;
 }
+
+.hidden {
+  display: none;
+}
+
+.cards__list {
+  list-style: none;
+  display: flex;
+}
