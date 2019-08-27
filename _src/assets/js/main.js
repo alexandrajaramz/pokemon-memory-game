@@ -37,13 +37,13 @@ function game () {
         let cardName = item.name;
         let cardPair = item.pair;
 
-        card += `<li>
-                  <img class="card__img hidden"
+        card += `<li class="cards__list-card js-card">
+                  <img class="card__img js-card-img hidden"
                   src="${cardUrlFront}"
                   alt="${cardName}"
                   data-pair="${cardPair}">
                   </img>
-                  <img class="card__img"
+                  <img class="card__img js-card-img"
                   src="${cardUrlBack}"
                   alt="${cardNameBack}"
                   data-pair="${cardPair}">
@@ -51,7 +51,19 @@ function game () {
                 </li>`;
       }
       cardsList.innerHTML = card;
+      const cardsArray = document.querySelectorAll('.js-card');
+      for (const item of cardsArray) {
+        item.addEventListener('click', changeImg);
+      }
     });
+}
+
+//CHANGE CARD'S IMAGE WHEN CLICKED
+function changeImg (event) {
+  const clickedImage = event.currentTarget.querySelectorAll('.js-card-img');
+  for (const item of clickedImage) {
+    item.classList.toggle('hidden');
+  }
 }
 
 //LISTENERS
