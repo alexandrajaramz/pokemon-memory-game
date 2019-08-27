@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Pokémon Memory game</title>
+        <link rel="stylesheet" href="assets/css/main.css">
+    </head>
+    
+    <body class="page">
+        <header class="page__header">
+             <h1 class="header__title">Pokémon Memory Game</h1>
+
+        </header>
+        <main class="page__main">
+            <form action="" class="form">
+                <label for="four">
+                    <input id="four" type="radio" value="4" name="cards-options" checked class="form__radio js-form__radio"
+                    />4</label>
+                <label for="six">
+                    <input id="six" type="radio" value="6" name="cards-options" class="form__radio js-form__radio"
+                    />6</label>
+                <label for="eight">
+                    <input id="eight" type="radio" value="8" name="cards-options" class="form__radio js-form__radio"
+                    />8</label>
+                <label for="start__btn">
+                    <input type="button" value="Comenzar" class="start__btn js-startBtn">
+                </label>
+            </form>
+            <ul class="cards__list js-cards-list"></ul>
+        </main>
+        <script src="assets/js/main.js"></script>
+    </body>
+
+</html>
